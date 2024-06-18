@@ -55,22 +55,23 @@ API для управления правами пользователей и г�
 
 ```sh
 curl -X POST -H "Content-Type: application/json" -d '{"action":"addUserToGroup", "userId":1, "groupId":1}' http://localhost:8000/api.php
+```
 Удалить пользователя из группы
-sh
-Копировать код
+```sh
 curl -X POST -H "Content-Type: application/json" -d '{"action":"removeUserFromGroup", "userId":1, "groupId":1}' http://localhost:8000/api.php
+```
 Получить права пользователя
-sh
-Копировать код
+```sh
 curl -X GET http://localhost:8000/api.php?userId=1
+```
 Тестирование
 Запустите тесты:
 
-sh
-Копировать код
+```sh
 php8.3 vendor/bin/phpunit --bootstrap vendor/autoload.php tests/UserTest.php
+```
 Структура проекта
-Копировать код
+```sh
 project/
 │
 ├── api.php
@@ -79,3 +80,4 @@ project/
 ├── composer.json
 └── tests/
     └── UserTest.php
+```
