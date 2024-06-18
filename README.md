@@ -71,7 +71,7 @@ curl -X GET http://localhost:8000/api.php?userId=1
 php8.3 vendor/bin/phpunit --bootstrap vendor/autoload.php tests/UserTest.php
 ```
 Структура проекта
-```sh
+```txt
 project/
 │
 ├── api.php
