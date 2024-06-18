@@ -12,8 +12,8 @@ API для управления правами пользователей и г�
 1. Клонируйте репозиторий:
 
     ```sh
-    git clone https://github.com/yourusername/your-repo.git
-    cd your-repo
+    git clone https://github.com/vvigode/Loyalty.git
+    cd Loyalty
     ```
 
 2. Установите зависимости через Composer:
