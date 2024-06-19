@@ -110,22 +110,34 @@ php -S localhost:8000
 
 ## Использование API
 
-### Добавить пользователя в группу
+### Добавление пользователя в группу
 
 ```sh
 curl -X POST -H "Content-Type: application/json" -d '{"action":"addUserToGroup", "userId":1, "groupId":1}' http://localhost:8000/api.php
 ```
 
-### Удалить пользователя из группы
+### Удаление пользователя из группы
 
 ```sh
 curl -X POST -H "Content-Type: application/json" -d '{"action":"removeUserFromGroup", "userId":1, "groupId":1}' http://localhost:8000/api.php
 ```
 
-### Получить права пользователя
+### Получение прав пользователя
 
 ```sh
-curl -X GET http://localhost:8000/api.php?userId=1
+curl -X GET "http://localhost:8000/api.php?action=getUserPermissions&userId=1"
+```
+
+### Добавление пользователя в заблокированные
+
+```sh
+curl -X POST -H "Content-Type: application/json" -d '{"action":"addUserToBlocked", "userId":1, "permissionId":1}' http://localhost:8000/api.php
+```
+
+### Удаление пользователя из заблокированных
+
+```sh
+curl -X POST -H "Content-Type: application/json" -d '{"action":"removeUserFromBlocked", "userId":1, "permissionId":1}' http://localhost:8000/api.php
 ```
 
 ## Тестирование
